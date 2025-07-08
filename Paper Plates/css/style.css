@@ -1,0 +1,46 @@
+/* Font family overrides for Tailwind to use custom fonts */
+.font-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.font-bold {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.hero-bg {
+  background-image: url('images/hero-bg.jpeg'); /* Updated background image path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency here */
+  z-index: 1; /* Place overlay behind content */
+}
+
+.hero-bg > div {
+  position: relative; /* Bring the content forward */
+  z-index: 2; /* Ensure content is above the overlay */
+}
+
+/* Responsive font sizes for hero section */
+@media (max-width: 767px) {
+  .hero-bg h2 {
+    font-size: 2.5rem; /* For smaller screens */
+  }
+  .hero-bg p {
+    font-size: 1rem; /* For smaller screens */
+  }
+}
