@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // You could add more here, like:
+    // You could add more features later:
     // - Form validation
-    // - Image sliders/carousels (using a library or custom code)
-    // - "Back to top" button
-    // - Animations on scroll (using libraries like AOS)
+    // - Image sliders/carousels
+    // - Back-to-top button
+    // - Animations on scroll (AOS or GSAP)
 });

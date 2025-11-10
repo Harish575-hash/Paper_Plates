@@ -1,4 +1,4 @@
-/* Font family overrides for Tailwind to use custom fonts */
+/* Fonts */
 .font-sans {
   font-family: 'Open Sans', sans-serif;
 }
@@ -6,19 +6,21 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Hover grow */
 .hover-scale:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
+/* Hero section background */
 .hero-bg {
-  background-image: url('images/hero-bg.jpeg'); /* Updated background image path */
+  background-image: url('../js/img1.png'); /* Use the new image you wanted */
   background-size: cover;
   background-position: center;
   position: relative;
-
 }
 
+/* Add dark overlay */
 .hero-bg::before {
   content: '';
   position: absolute;
@@ -26,21 +28,31 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency here */
-  z-index: 1; /* Place overlay behind content */
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
 .hero-bg > div {
-  position: relative; /* Bring the content forward */
-  z-index: 2; /* Ensure content is above the overlay */
+  position: relative;
+  z-index: 2;
 }
 
-/* Responsive font sizes for hero section */
+/* Lotus animation */
+h1 span.lotus {
+  animation: pulse 1.8s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive font sizes */
 @media (max-width: 767px) {
   .hero-bg h2 {
-    font-size: 2.5rem; /* For smaller screens */
+    font-size: 2.5rem;
   }
   .hero-bg p {
-    font-size: 1rem; /* For smaller screens */
+    font-size: 1rem;
   }
 }
